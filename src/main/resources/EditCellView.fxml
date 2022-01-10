@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="610.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.EditCellController">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label text="AlwaysEditCell" />
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+               <children>
+                  <VBox prefHeight="235.0" prefWidth="204.0" spacing="5.0" style="-fx-border-color: GRAY;">
+                     <children>
+                        <HBox spacing="5.0">
+                           <children>
+                              <Label text="Binding" />
+                               <Button onAction="#handleAddItem" prefHeight="30.0" prefWidth="30.0" text="+" />
+                               <Button onAction="#handleDeleteBindingItem" prefHeight="30.0" prefWidth="30.0" text="-" />
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </HBox>
+                        <TableView fx:id="bindingTableView" minHeight="-Infinity" prefHeight="200.0" prefWidth="300.0">
+                          <columns>
+                            <TableColumn fx:id="bindingStringColumn" prefWidth="109.0" text="Text" />
+                            <TableColumn fx:id="bindingNumberColumn" minWidth="0.0" prefWidth="75.0" text="Integer" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="235.0" prefWidth="204.0" spacing="5.0" style="-fx-border-color: GRAY;">
+                     <children>
+                        <HBox spacing="5.0">
+                           <children>
+                              <Label text="Easybind (T-Diez)" />
+                              <Button onAction="#handleAddItem" prefHeight="30.0" prefWidth="30.0" text="+" />
+                              <Button onAction="#handleDeleteTdiezItem" prefHeight="30.0" prefWidth="30.0" text="-" />
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </HBox>
+                        <TableView fx:id="tdiezTableView" minHeight="-Infinity" prefHeight="200.0" prefWidth="300.0">
+                           <columns>
+                              <TableColumn fx:id="tdiezStringColumn" prefWidth="109.0" text="Text" />
+                              <TableColumn fx:id="tdiezNumberColumn" minWidth="0.0" prefWidth="75.0" text="Integer" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="235.0" prefWidth="204.0" spacing="5.0" style="-fx-border-color: GRAY;">
+                     <children>
+                        <HBox spacing="5.0">
+                           <children>
+                              <Label text="Easybind (T-Mikula)" />
+                              <Button onAction="#handleAddItem" prefHeight="30.0" prefWidth="30.0" text="+" />
+                              <Button onAction="#handleDeleteTmikulaItem" prefHeight="30.0" prefWidth="30.0" text="-" />
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </HBox>
+                        <TableView fx:id="tmikulaTableView" minHeight="-Infinity" prefHeight="200.0" prefWidth="300.0">
+                           <columns>
+                              <TableColumn fx:id="tmikulaStringColumn" prefWidth="109.0" text="Text" />
+                              <TableColumn fx:id="tmikulaNumberColumn" minWidth="0.0" prefWidth="75.0" text="Integer" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Label text="RegularCell" />
+             <TableView fx:id="regularTableView" minHeight="-Infinity" prefHeight="200.0" prefWidth="200.0">
+                 <columns>
+                     <TableColumn fx:id="regStringColumn" prefWidth="109.0" text="Text" />
+                     <TableColumn fx:id="regNumberColumn" minWidth="0.0" prefWidth="75.0" text="Integer" />
+                 </columns>
+                 <columnResizePolicy>
+                     <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                 </columnResizePolicy>
+             </TableView>
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints halignment="RIGHT" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="IntegerTotal: " />
+                  <Label fx:id="totalLabel" text="0" GridPane.columnIndex="1" />
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</AnchorPane>
